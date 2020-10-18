@@ -1,0 +1,19 @@
+﻿%rebase('base.tpl')
+
+ <h1 class="title is-1">Bisekcija</h1>
+<br>
+<br>
+{{a}} <br>
+
+<h2>Koraki bisekcije</h2> <br>
+
+<b>{{a.seznam_intervalov_bisekcije()}}</b><br>
+
+Število potrebnih korakov za bisekcijo: <b>{{a.stevilo_korakov()}}</b> <br>
+
+Najdena ničla:<br>
+<b>{{a.nicla_bisekcije()}}</b>
+
+ <form action="/" method="GET">
+    <input class="button is-light" type="submit" value="Nazaj na začetno stran"> 
+ </form>

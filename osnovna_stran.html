@@ -1,0 +1,58 @@
+﻿%rebase('base.tpl')
+
+  <h1 class="title is-1">Iskanje ničle linearne funkcije z bisekcijo</h1>
+
+  <section class="section">
+       Bisekcija je numerična metoda iskanja ničel zvezne funkcije v določenem intervalu. Kaj več o bisekciji si lahko preberete 
+       <a href='https://sl.wikipedia.org/wiki/Bisekcija_(numeri%C4%8Dna_metoda)'>tukaj</a> ali pa <a href='http://www2.arnes.si/~mpavle1/mp/dodatek2.html'>tukaj</a>.
+       Program sprejme linearno funkcijo, interval, na katerem naj poišče ničlo (če ta obstaja) in natančnost, na katero želimo izračunati ničlo. Natančnost predstavlja število natančno izračunanih decimalnih mest. 
+       </section>
+
+  <section class="section">
+    <ul>
+      <li>Za uporabo programa moraš izbrati koeficiente pri spremenljivki x in prosti člen. 
+        Edina omejitev je, da je koeficient pri spremenljicki celo število, prosti člen pa je lahko poljubno decimalno število.</li>
+      <li>Funkcijo vnesemo v program kot seznam koeficientov na način: [prosti_člen, koeficient_pri_x]</li>
+      <li>Python decimalno število prepozna, če je zapisano z decimalno piko in ne decimalno vejico, kot smo Slovenci navajeni. </li>
+      <li>Natančnost lahko izberaš med 0 in 15.</li>
+    </ul> 
+  </section>
+
+  <h2 class="title is-2">Primer</h2>
+  <section class="section">
+      V spodnjem primeru, si lahko ogledate, kaj moj program naredi. <br>
+      <b>Vnešeni podatki:</b> <br>
+      Funkcija: [5, 1] <br>
+      Interval iskanja ničle z bisekcijo: [-10, 1] <br>
+      Natančnost: 6 <br>
+
+      <b>Podatki, ki jih program izračuna:</b> <br>
+      Kaj delamo: {{primer}}<br>
+      Seznam intervalov, s katerimi dela bisekcija: {{primer.seznam_intervalov_bisekcije()}} <br> 
+      Število korakov: {{primer.stevilo_korakov()}} <br>
+      Ničla izračunana z bisekcijo: {{primer.nicla_bisekcije()}} <br>
+  
+  </section>
+
+
+  <form action="/izracun/" method="POST">
+    
+    
+   Linearna fukcija: <input class="input" type="text" placeholder="Napiši seznam koeficientov" name="funkcija">
+   Interval: <input class="input" type="text" placeholder="Interval, na katerem iščemo ničlo" name="interval">
+   Natančnost: <input class="input" type="text" placeholder="Natančnost" name="natancnost">
+
+   <input class="button is-light" type="submit" value="Izvedi bisekcijo">
+
+  </form>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        2020, Eva Horvat, študentka Pedagoške matematike, FMF
+      </p>
+    </div>
+  </footer>
+
+
+
